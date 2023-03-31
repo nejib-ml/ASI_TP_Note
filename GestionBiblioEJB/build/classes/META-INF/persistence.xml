@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="GestionBiblioEJB" transaction-type="JTA">
+		<jta-data-source>java:/MySqlGestionBiblioJPA</jta-data-source>
+		<class>fr.univtours.polytech.gestionbiblioejb.model.Author</class>
+		<class>fr.univtours.polytech.gestionbiblioejb.model.Book</class>
+		<class>fr.univtours.polytech.gestionbiblioejb.model.Genre</class>
+		<class>fr.univtours.polytech.gestionbiblioejb.model.Loan</class>
+		<class>fr.univtours.polytech.gestionbiblioejb.model.User</class>
+		<validation-mode>CALLBACK</validation-mode>
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+		</properties>
+	</persistence-unit>
+</persistence>
